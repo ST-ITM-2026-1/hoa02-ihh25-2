@@ -40,3 +40,53 @@ filterBtns.forEach(btn => {
         });
     });
 });
+
+// ===== GitHub API =====
+async function loadGitHub() {
+    const profileCard = document.getElementById('profile-card');
+    const repoGrid = document.getElementById('repo-grid');
+
+    if (!profileCard || !repoGrid) return;
+
+    try {
+        // 프로필 불러오기
+        const profileRes = await fetch('https://api.github.com/users/ihh25');
+        const profile = await profileRes.json();
+
+        profileCard.innerHTML = `
+            <img src="${profile.avatar_url}" alt="avatar" class="github-avatar" />
+            <div class="github-profile-info">
+                <h3>${profile.name || profile.login}</h3>
+                <p>${profile.bio || ''}</p>
+                <div class="github-stats">
+                    <span>📁 Repos: ${profile.public_repos}</span>
+                    <span>👥 Followers: ${profile.followers}</span>
+                    <span>➡️ Following: ${profile.following}</span>
+                </div>
+                <a href="${profile.html_url}" target="_blank" class="github-link">View on GitHub</a>
+            </div>
+        `;
+
+        // 저장소 불러오기
+        const repoRes = await fetch('https://api.github.com/users/ihh25/repos?sort=updated');
+        const repos = await repoRes.json();
+
+        repoGrid.innerHTML = repos.map(repo => `
+            <div class="repo-card">
+                <h4><a href="${repo.html_url}" target="_blank">${repo.name}</a></h4>
+                <p>${repo.description || 'No description'}</p>
+                <div class="repo-meta">
+                    <span>💻 ${repo.language || 'N/A'}</span>
+                    <span>⭐ ${repo.stargazers_count}</span>
+                    <span>🍴 ${repo.forks_count}</span>
+                </div>
+            </div>
+        `).join('');
+
+    } catch (error) {
+        profileCard.innerHTML = '<p>Failed to load GitHub data.</p>';
+        repoGrid.innerHTML = '<p>Failed to load repositories.</p>';
+    }
+}
+
+loadGitHub();
