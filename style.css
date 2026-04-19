@@ -571,6 +571,15 @@ footer a:hover {
   .contact-info {
     width: 100%;
   }
+  
+  .github-profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .repo-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
