@@ -458,7 +458,7 @@ footer a:hover {
 
 }
 
-/* ===== 다크모드 ===== */
+/* ============= 다크모드 ============= */
 body.dark {
   background: #1a2e2b;
   color: #e0e0e0;
@@ -484,15 +484,66 @@ body.dark main h1 {
   background-color: #16312e;
 }
 
-/* 다크 모드 contact 버튼*/
+/*------다크모드일때 hover contact send 버튼--*/
 body.dark .contact-form button {
     background: #0f3330;
     color: #e0e0e0;
     border-color: #c5ede4;
 }
-
 body.dark .contact-form button:hover {
-    background: #e0e0e0;
+    background: #c5ede4;
+    color: #1a2e2b;
+}
+
+/* ---다크모드일때 hover project view detail 버튼----*/
+body.dark .project-card a {
+    background: #0f3330;
+    color: #e0e0e0;
+    outline-color: #c5ede4;
+}
+body.dark .project-card a:hover {
+    background: #c5ede4;
+    color: #1a2e2b;
+}
+/* 필터 버튼**/
+body.dark .filter-btn {
+    background: #16312e;
+    color: #e0e0e0;
+    border-color: #c5ede4;
+}
+body.dark .filter-btn.active,
+body.dark .filter-btn:hover {
+    background: #0f3330;
+}
+
+/* ===== 다크모드 - GitHub ===== */
+body.dark .github-profile-card,
+body.dark .repo-card {
+    background: #16312e;
+    border: 1px solid #2a5a54;
+}
+
+body.dark .github-stats span {
+    background: #0f3330;
+}
+
+body.dark .repo-card h4 a {
+    color: #e0e0e0;
+}
+
+body.dark .github-profile-info p,
+body.dark .repo-card p,
+body.dark .repo-meta {
+    color: #a0c4b8;
+}
+/* ---다크모드일때 hover github View on GitHub 버튼----*/
+body.dark .github-link {
+    background: #0f3330;
+    color: #e0e0e0;
+    outline-color: #c5ede4;
+}
+body.dark .github-link:hover {
+    background: #c5ede4;
     color: #1a2e2b;
 }
 
@@ -537,27 +588,107 @@ body.dark .contact-form button:hover {
     font-weight: bold;
 }
 
-/*------다크모드일때 버튼 hover--*/
-/*------contact send 버튼--*/
-body.dark .filter-btn {
-    background: #16312e;
-    color: #e0e0e0;
-    border-color: #c5ede4;
+/* ===== GitHub 페이지 ===== */
+.github-section {
+    padding: 40px 0;
 }
 
-body.dark .filter-btn.active,
-body.dark .filter-btn:hover {
-    background: #0f3330;
+.github-profile-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
 }
 
-/* ---project view detail 버튼----*/
-body.dark .project-card a {
-    background: #0f3330;
-    color: #e0e0e0;
-    outline-color: #c5ede4;
+.github-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #c5ede4;
 }
 
-body.dark .project-card a:hover {
-    background: #e0e0e0;
-    color: #1a2e2b;
+.github-profile-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.github-profile-info p {
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.github-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.github-stats span {
+    font-size: 0.9rem;
+    background: #c5ede45f;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.github-link {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #c5ede4;
+    border-radius: 50px;
+    outline: 2px solid #222;
+    transition: all 0.2s;
+}
+
+.github-link:hover {
+    background: #222;
+    color: #c5ede4;
+}
+
+.repo-title {
+    margin-bottom: 16px;
+}
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.repo-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.repo-card h4 {
+    margin-bottom: 8px;
+    border-bottom: 2px solid #c5ede4;
+    padding-bottom: 8px;
+}
+
+.repo-card h4 a {
+    color: #222;
+}
+
+.repo-card h4 a:hover {
+    color: #5d9e98;
+}
+
+.repo-card p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.repo-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #888;
 }
