@@ -88,5 +88,4 @@ async function loadGitHub() {
         repoGrid.innerHTML = '<p>Failed to load repositories.</p>';
     }
 }
-
 loadGitHub();
