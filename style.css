@@ -1,0 +1,459 @@
+/* ===== 리셋 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== body ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== 공통 ===== */
+p { 
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== header / nav ===== */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-size: 16px;
+}
+
+nav a.active {
+  font-weight: bold;
+  border-bottom: 4px solid #c5ede4;
+  padding-bottom: 4px;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color:#c5ede4;
+}
+
+.nav-logo {
+  font-weight: bold;
+  color:#5d9e98;
+  font-size: 24px;
+}
+
+.nav-logo:hover {
+  color:rgb(255, 221, 108);
+}
+
+/* ===== main ===== */
+main {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 60px;
+  flex:1;
+}
+
+main h1 {
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 2rem;
+  background-color: #c5ede4;
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+
+/* ===== footer ===== */
+footer {
+  text-align: center;
+  padding: 24px;
+  background: #c5ede4;
+  color: #4f7e79;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== home - intro ===== */
+.intro {
+  text-align: right;
+  padding: 20px 0px;
+  border-bottom: 4px dashed #c5ede4;
+}
+
+/* ===== home - about ===== */
+.about {
+  padding: 40px 0px;
+}
+
+.about h2 {
+  margin-bottom: 16px;
+}
+
+.about-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background: #c5ede45f;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 24px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  margin-bottom: 8px;
+  margin-top: 24px;
+  border-bottom: 2px solid #c5ede4;
+  padding-bottom: 4px;
+}
+
+.about-text h3:first-child {
+  margin-top: 0;
+}
+
+.name-highlight {
+  font-size: 1.5rem;
+}
+
+/*--------profile-------*/
+.profile-wrap {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  max-width: 100%; /*추가*/
+}
+
+.profile-img, .profile-img-hover {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  border: 4px solid #c5ede4;
+  max-width: 100%; /*추가*/
+}
+
+.profile-img-hover {
+  display: none;
+}
+
+.profile-wrap:hover .profile-img {
+  display: none;
+}
+
+.profile-wrap:hover .profile-img-hover {
+  display: block;
+}
+
+/* ===== projects ===== */
+.projects {
+  padding: 40px 0px;
+}
+
+.projects h2 {
+  margin-bottom: 24px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+  border-bottom: 2px solid #c5ede4;
+  padding-bottom: 8px;
+}
+
+.project-meta {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.project-card a{
+  margin-top: auto;
+  align-self: center;
+  display: inline-block;
+  padding: 6px 14px;
+  background:#c5ede4;
+  border-radius: 50px;
+  outline: 2px solid #222;
+  transition: all 0.2s;
+}
+
+.project-card a:hover {
+  background: #222;
+  color: #c5ede4;
+  transform: scale(1.05);
+}
+
+/*-----project-card 글씨 hover-----*/
+.project-card a .hover-text {
+  display: none;
+}
+.project-card a:hover .default {
+  display: none;
+}
+
+.project-card a:hover .hover-text {
+  display: inline;
+}
+
+/* ===== skills ===== */
+.skills {
+  padding: 40px 0px;
+}
+
+.skills h2 {
+  margin-bottom: 24px;
+}
+
+.skills h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.skill-card, .skill-learning {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 16px 24px 32px 24px;
+}
+
+.skill-card li, .skill-learning li {
+  list-style: disc;
+  margin-left: 16px;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card h3, .skill-learning h3 {
+  margin-bottom: 12px;
+  border-bottom: 2px solid #c5ede4;
+  padding-bottom: 8px;
+}
+
+.skill-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-learning {
+  margin-top: 20px; /* 그리드와 간격 */
+}
+
+.skill-learning ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+/* ===== contact ===== */
+.contact {
+  display: flex;
+  gap: 120px;
+  padding: 60px 0px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+.contact-info p,
+.contact-info a {
+  display: block;
+  line-height: 1.8;
+}
+
+.contact-info p a:hover {
+  text-decoration: underline;
+}
+
+.github-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 8px;
+  transition: transform 0.2s;
+}
+
+.github-icon:hover {
+  transform: scale(1.2);
+}
+
+.contact-form {
+  flex: 2;
+  max-width: 600px;
+}
+
+.contact-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #5d9e98a2;
+  background: white;
+}
+
+.contact-form textarea {
+  height: 150px;
+  font-family: inherit;
+}
+
+.contact-form button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 24px;
+  background: #c5ede4;
+  color: #222;
+  border: 1px solid #5d9e98a2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background:#222;
+  color: #c5ede4;
+}
+
+/* ===== 반응형 ===== */
+
+/* ===== (481px ~ 768px) ===== */
+@media (max-width: 768px) {
+  main {
+    padding : 40px 30px;
+  }
+  
+  .about-card {
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    grid-template-columns: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*----------contact--------------*/
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+}
+
+/* ===== (0px ~ 480px) ===== */
+@media (max-width: 480px) {
+  main {
+    padding : 24px 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  nav ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
