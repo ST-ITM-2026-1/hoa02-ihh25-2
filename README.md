@@ -87,5 +87,5 @@ Extend your static portfolio (from Assignment 1) by integrating interactive and 
 
 ---
 
-## Website URL
+## GitHub Pages link
 https://st-itm-2026-1.github.io/hoa02-ihh25-2/
