@@ -460,27 +460,40 @@ footer a:hover {
 
 /* ===== 다크모드 ===== */
 body.dark {
-  background: #1a1a2e;
+  background: #1a2e2b;
   color: #e0e0e0;
 }
 
 body.dark footer {
-  background: #0f3460;
-  color: #a0c4ff;
+  background: #0f3330;
+  color: #c5ede4;
 }
 
 body.dark .about-card {
-  background: #16213e;
+  background: #16312e;
 }
 
 body.dark .project-card,
 body.dark .skill-card,
 body.dark .skill-learning {
-  background: #16213e;
+  background: #16312e;
+  border: 0.5px solid #2a5a54;
 }
 
 body.dark main h1 {
-  background-color: #16213e;
+  background-color: #16312e;
+}
+
+/* 다크 모드 contact 버튼*/
+body.dark .contact-form button {
+    background: #0f3330;
+    color: #e0e0e0;
+    border-color: #c5ede4;
+}
+
+body.dark .contact-form button:hover {
+    background: #e0e0e0;
+    color: #1a2e2b;
 }
 
 /* ===== 테마 버튼 ===== */
@@ -524,13 +537,27 @@ body.dark main h1 {
     font-weight: bold;
 }
 
+/*------다크모드일때 버튼 hover--*/
+/*------contact send 버튼--*/
 body.dark .filter-btn {
-    background: #16213e;
+    background: #16312e;
     color: #e0e0e0;
-    border-color: #a0c4ff;
+    border-color: #c5ede4;
 }
 
 body.dark .filter-btn.active,
 body.dark .filter-btn:hover {
-    background: #0f3460;
+    background: #0f3330;
+}
+
+/* ---project view detail 버튼----*/
+body.dark .project-card a {
+    background: #0f3330;
+    color: #e0e0e0;
+    outline-color: #c5ede4;
+}
+
+body.dark .project-card a:hover {
+    background: #e0e0e0;
+    color: #1a2e2b;
 }
